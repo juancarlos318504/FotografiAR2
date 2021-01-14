@@ -203,6 +203,7 @@
     //StartButton.setAttribute("disabled", "disabled");
     StartButton.addEventListener("click", 
         function() {
+            init1();
             StartDiv.remove();
             //document.getElementById("montaje").play();
         }
@@ -321,7 +322,7 @@
     }
 
     // Load init
-    init1();
+    //init1();
 
     /*const webcam = new Webcam(video, 'user', canvas, null);
     webcam.start()
