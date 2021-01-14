@@ -236,7 +236,20 @@
 
     
 
+
     // Access webcam
+    async function init1() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+            StartButton.removeAttribute("disabled");
+        } catch (e) {
+            //errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+            console.log("An error occured! " + e);
+            alert('Es necesario que brindes acceso a la cámara de tu dispositivo para poder interactuar. Utiliza el ícono de candado que esta junto a la url para poder brindar los permisos necesarios.');
+        }
+    }
+
     function init(){
         /*if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia (constraints)
@@ -305,7 +318,7 @@
     }
 
     // Load init
-    init();
+    init1();
 
     const logo = document.getElementById("logo");
     // Draw image
