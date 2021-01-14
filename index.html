@@ -163,7 +163,8 @@
                 <source src="cobra1.webm" type="video/webm">
                 Tu navegador no soporta el montaje :(
             </video>
-            <video id="video" playsinline autoplay class="o-video"></video>
+
+            <video id="video" width="1280" height="720" playsinline autoplay class="o-video"></video>
     
             <div class="o-video o-logo-container" id="logo-container"><img id="logo" src="LogoUnicentro.png"/></div>
             
@@ -188,7 +189,9 @@
     
 </body>
 
-<script>
+<!--<script type="text/javascript" src="webcam-easy.min.js"></script>-->
+
+<script type="text/javascript">
     'use strict';
 
     
@@ -319,6 +322,15 @@
 
     // Load init
     init1();
+
+    /*const webcam = new Webcam(video, 'user', canvas, null);
+    webcam.start()
+    .then(result =>{
+        console.log("webcam started");
+    })
+    .catch(err => {
+        console.log(err);
+    });*/
 
     const logo = document.getElementById("logo");
     // Draw image
